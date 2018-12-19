@@ -1,0 +1,13 @@
+[Unit]
+Description=blink.py - LED Blink service that runs in the background 
+Documentation=https://example.com
+
+[Service]
+Environment=INTERVAL=1
+Type=simple
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/blink.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
